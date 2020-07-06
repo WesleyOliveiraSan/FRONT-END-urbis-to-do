@@ -1,0 +1,13 @@
+<lib-toastify-toast-container></lib-toastify-toast-container>
+<div id="container">
+  <form (ngSubmit)="onSubmit()" [formGroup]="formGroup">
+    <img src="../../../assets/images/urbis.webp" />
+    <p>Olá! Faça login para continuar.</p>
+    <span *ngIf="email.invalid && email.touched">Digite seu email.</span>
+    <input [ngClass]="(email.invalid && email.touched) && 'error'" type="email" formControlName="email"  placeholder="E-mail"/><br />
+    <span *ngIf="password.invalid && password.touched">Digite sua senha.</span>
+    <input [ngClass]="(password.invalid && password.touched) && 'error'" type="password" formControlName="password" placeholder="Senha" /><br />
+    <button [disabled]="formGroup.invalid" type="submit">Entrar</button>
+    <p id="signUp">Novo na Lista de Tarefas da Urbis? <a routerLink="/signup" routerLinkActive="active">Cadastre-se</a></p>
+  </form>
+</div>

@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  min-height: 100%;
+}
+
+body{
+  -webkit-font-smoothing: antialiased !important;
+  background-color: #eee;
+
+}
+
+body, input, button{
+  color: #222;
+  font-size:14px;
+  font-family: 'Poppins','Arial','Helvetica';
+}
+
+button, input[type=checkbox]{
+  cursor: pointer;
+}
+
+textarea{
+  resize: none;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #18c78a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ddd;
+}

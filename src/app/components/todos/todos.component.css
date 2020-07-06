@@ -1,0 +1,98 @@
+#header{
+  display: flex;
+  position: fixed;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0 40px;
+  align-items: center;
+  height: 95px;
+  background-color: #1d0e60;
+  box-shadow: 0 0 6px 0 #333;
+}
+#header p {
+  color: #fff;
+  font-size: 16px;
+  margin-top: 22px;
+  margin-left: 4px;
+}
+#header button{
+  margin-top: 22px;
+  margin-left: auto;
+  background-color: transparent;
+  border: 0;
+  font-size: 16px;
+  color: #fff;
+}
+#todoList{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 120px 24px;
+}
+
+.todo{
+  display: flex;
+  flex-basis: 19%;
+  min-width: 19%;
+  flex-direction: row;
+  background-color: #18c78a;
+  box-shadow: 0 10px 6px -5px #333;
+  margin: 0 0.5%;
+  margin-bottom: 1%;
+  height: 200px;
+}
+#addTodo{
+  display: flex;
+  flex-basis: 19%;
+  min-width: 19%;
+  flex-direction: row;
+  background-color: #1d0e60;
+  box-shadow: 0 10px 6px -5px #333;
+  margin: 0 0.5%;
+  margin-bottom: 1%;
+  height: 200px;
+}
+
+@media (max-width: 1024px){
+  .todo, #addTodo{
+    flex-basis: 24%;
+    min-width: 24%;
+  }
+  #todoList{
+    padding: 120px 0;
+  }
+
+}
+@media (max-width: 768px){
+  .todo, #addTodo{
+    flex-basis: 32%;
+    min-width: 32%;
+  }
+  #todoList{
+    padding: 120px 0;
+  }
+
+}
+
+@media (max-width: 767px){
+  #header{
+    padding: 0 20px;
+  }
+  #header p, #header button{
+    font-size: 14px;
+  }
+  #header img{
+      display: none;
+  }
+  .todo, #addTodo{
+    flex-basis: 49%;
+    min-width: 49%; 
+  }
+  #todoList{
+    padding: 120px 0;
+  }
+
+}

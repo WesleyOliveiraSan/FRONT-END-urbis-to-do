@@ -1,0 +1,9 @@
+<div class="todo" [ngClass]="{'done' : todo.completed}" (click)="onToggle(todo)">
+  <div>
+    <p>{{ todo.title }}</p>
+    <button (click)="onDelete(todo)" class="del"><i *ngIf="todo.completed" id="ok" class="fas fa-check"></i><i *ngIf="!todo.completed" class="fas fa-trash-alt"></i></button>
+  </div>
+  <div>
+    <small>{{ todo.description }}</small>
+  </div>
+</div>

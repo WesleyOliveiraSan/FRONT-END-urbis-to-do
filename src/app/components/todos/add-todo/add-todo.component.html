@@ -1,0 +1,14 @@
+<lib-toastify-toast-container></lib-toastify-toast-container>
+<div id="card">
+  <div id="card-info">
+    <img src="../../../../assets/images/urbis.png" />
+    <p>Lista de Tarefas Urbis</p>
+  </div>
+  <form id="card-form" (ngSubmit)="onSubmit()" [formGroup]="formGroup">
+    <input [ngClass]="(title.invalid && title.touched) && 'error'" type="text" formControlName="title"
+      placeholder="Tarefa" />
+    <textarea [ngClass]="(description.invalid && description.touched) && 'error'" type="textbox"
+      formControlName="description" placeholder="Descrição..." rows="3"></textarea>
+    <button [disabled]="formGroup.invalid" type="submit">Adicionar Tarefa</button>
+  </form>
+</div>

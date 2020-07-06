@@ -1,0 +1,15 @@
+<lib-toastify-toast-container></lib-toastify-toast-container>
+<div id="container">
+  <form (ngSubmit)="onSubmit()" [formGroup]="formGroup">
+    <img src="../../../assets/images/urbis.webp" />
+    <p>Crie a sua conta!</p>
+    <span *ngIf="name.invalid && name.touched">Nome precisa ter no mínimo 3 caracteres</span>
+    <input [ngClass]="(name.invalid && name.touched) && 'error'" type="text" formControlName="name" placeholder="Nome" /><br />
+    <span *ngIf="email.invalid && email.touched">Digite um email válido.</span>
+    <input [ngClass]="(email.invalid && email.touched) && 'error'" type="email" formControlName="email" placeholder="E-mail" /><br />
+    <span *ngIf="password.invalid && password.touched">Sua senha precisa ter no mínimo 6 caracteres.</span>
+    <input [ngClass]="(password.invalid && password.touched) && 'error'"type="password" formControlName="password" placeholder="Senha" /><br />
+    <button [disabled]="formGroup.invalid" type="submit">Inscrever-se</button>
+    <p id="login">Já possuiu uma conta? <a routerLink="/login" routerLinkActive="active">Faça login!</a></p>
+  </form>
+</div>

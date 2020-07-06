@@ -1,0 +1,10 @@
+<div id="header">
+  <img src="../../../assets/images/urbis.webp" />
+  <p>Olá, {{ username }}!</p>
+  <button (click)="logout()">Sair <i class="fas fa-sign-out-alt"></i></button>
+</div>
+<div id="todoList">
+  <app-add-todo id="addTodo" (addTodo)="addTodo($event)"></app-add-todo>
+  <app-todo-item class="todo" *ngFor="let todo of todos" [todo]="todo" (deleteTodo)="deleteTodo($event)">
+  </app-todo-item>
+</div>
